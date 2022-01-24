@@ -34,21 +34,11 @@ Each setting can be disabled in the mod settings menu. Restart required for them
 		<li>jamaicancastle.RF.fertilefields</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>Windows</li>
-		<li>LoonyLadle.RimWorld.Bones</li>
-		<li>Mlie.Fermenter</li>
-		<li>Mlie.Insulation</li>
-		<li>Mlie.RimPlas</li>
 		<li>NanoCE.GlassLights</li>
-		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
-		<li>Owlchemist.GloomyVanilla</li>
 		<li>Owlchemist.SimpleChains.Leather</li>
 		<li>Owlchemist.SimpleChains.Lumber</li>
-		<li>Rikiki.FishIndustry</li>
-		<li>Terragg.ExtendedStorage.Extended</li>
-		<li>VanillaExpanded.VBrewE</li>
-		<li>VanillaExpanded.VFEFarming</li>
-		<li>trasheddt.industrialisation</li>
-		<li>wofl.MoreFurnitureUpdated</li>
-		<li>zymex.GloomyVanillaOverhaul</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>neronix17.fr.content.dni</li>
+		<li>dismarzero.VGP.VGPGardenFabrics</li>
 	</loadAfter>
 </ModMetaData>
