@@ -15,9 +15,6 @@ Each setting can be disabled in the mod settings menu. Restart required for them
 
 ### Important Info:
 [Link to Full Feature List](https://github.com/leugimimi/DocWorld-Lite/wiki/Mod-Features)
-For info on Mod Conflicts, Save Compatibility, and a Changelog.
 
 
-_[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)_
-
-_[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
+_[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2730410892)_
