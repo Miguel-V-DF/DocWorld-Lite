@@ -4,7 +4,7 @@ A fork of the ambitious mod Docworld, this mod is more modest, patching a few mo
 - New biome foraged food types in caravans.
 - Beds require cloth (nullified by specialized bed mods).
 - More buildings can be minified, hand selected choices from Vanilla and Mods.
-- Glass lights actually requiring glass. Must use the Glass+Lights mod for the glass.
+- Glass lights actually requiring glass. Requires either Glass+Lights or just Glass mods for the glass. Don't use both together.
 - More linkable furniture support for various linkables where sensible.
 - More items can be stuffed.
 - Multi Mod Support that improves the compatibility and integration.
