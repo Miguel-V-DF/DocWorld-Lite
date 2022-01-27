@@ -55,8 +55,8 @@ I do not document every detail here, but you can get a good idea of which mods i
     Vanilla Furniture Expanded - Power
         {VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator}
 
-### Glass_Requisites (Glass+Lights mod required):
-`This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights as the base glass mod.`
+### Glass_Requisites (Requires either Glass+Lights or Just glass, don't use both):
+`This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights/Just Glass as the base glass mod.`
 
     Vanilla
         {Lamps and Sun Lamp require glass}
@@ -87,7 +87,7 @@ I do not document every detail here, but you can get a good idea of which mods i
     Vanilla Furniture Expanded
         {Lamps require glass}
     Vanilla Furniture Expanded - Spacer Module
-        {Lamps require glass, Vanilla outdoor lamps have equal lighting and resource requirements}
+        {Lamps require glass, Just glass outdoor lamps have equal lighting and resource requirements}
     Wall Light
         {Lamps require glass}
     UN-Colony (Continued), UN-Colony [1.2]
