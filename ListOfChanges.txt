@@ -87,7 +87,7 @@ I do not document every detail here, but you can get a good idea of which mods i
     Vanilla Furniture Expanded
         {Lamps require glass}
     Vanilla Furniture Expanded - Spacer Module
-        {Lamps require glass, Just glass outdoor lamps have equal lighting and resource requirements}
+        {Lamps require glass, Glass+Lights outdoor lamps have equal lighting and resource requirements}
     Wall Light
         {Lamps require glass}
     UN-Colony (Continued), UN-Colony [1.2]
