@@ -1,0 +1,4 @@
+# Changelog for DocWorld Lite
+# all the previous changes to the 1.4 update will not be included retroactively
+
+1.4.0 updated to 1.4 and tests passed for 1.4 and backwards compatibility with 1.3. 

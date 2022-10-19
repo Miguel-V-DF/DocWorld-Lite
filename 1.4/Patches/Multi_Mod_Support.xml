@@ -1,0 +1,1311 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change items and recipes based off whether or not multiple mods are loaded-->
+
+  <!--==========
+    Ceramics {Expanded Woodworking, Fertile Fields, Vanilla Furniture Expanded - Production}
+    ==========-->
+
+  <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ceramics VEF</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking (Forked)</li>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="N7_Make_FiberFromWood"]/recipeUsers</xpath>
+        <value>
+          <li>TableWoodworking</li>
+          <li>ElectricTableWoodworking</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add most recipes to RockMill from FF-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ceramics VEF</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="N7_Make_RawMudbricks" or defName="N7_Make_RawBricks" or defName="N7_Make_HardenedCeramic" or defName="N7_Make_Wafer" or defName="N7_Make_Porcelain"]/recipeUsers</xpath>
+        <value>
+          <li>RockMill</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add most recipes to VFE-Production electric stonecutter-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ceramics VEF</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Production</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="N7_Make_RawMudbricks" or defName="N7_Make_RawBricks" or defName="N7_Make_HardenedCeramic" or defName="N7_Make_Wafer" or defName="N7_Make_Porcelain"]/recipeUsers</xpath>
+        <value>
+          <li>VFE_TableStonecutterElectric</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Cupro's Stones {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall}
+    ==========-->
+
+  <!--Chunks are buildable-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Cupro's Stones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Steel</li>
+        <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Add shared stats to Cupro's Stone Bases-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[@Name = "STN_NormalChunkBase" or @Name = "STN_GraniticChunkBase" or @Name = "STN_SmoothChunkBase" or @Name = "STN_MarbledChunkBase" or @Name = "STN_BandedChunkBase"]</xpath>
+            <value>
+              <resourceReadoutPriority>Middle</resourceReadoutPriority>
+              <stuffProps>
+                <categories>
+                  <li>Chunky</li>
+                </categories>
+                <statOffsets>
+                  <WorkToBuild>140</WorkToBuild>
+                </statOffsets>
+                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Claystone-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkClaystone"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(228, 188, 147)</color>
+                <stuffAdjective>claystone</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Andesite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkAndesite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 164, 166)</color>
+                <stuffAdjective>andesite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Syenite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkSyenite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(186, 126, 121)</color>
+                <stuffAdjective>syenite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Gneiss-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkGneiss"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(146, 138, 104)</color>
+                <stuffAdjective>gneiss</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Quartzite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkQuartzite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 156, 160)</color>
+                <stuffAdjective>quartzite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Schist-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkSchist"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(105, 124, 102)</color>
+                <stuffAdjective>schist</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Gabbro-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkGabbro"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(122, 122, 122)</color>
+                <stuffAdjective>gabbro</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>5.25</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Diorite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkDiorite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(204, 204, 204)</color>
+                <stuffAdjective>diorite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Dunite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkDunite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(154, 162, 126)</color>
+                <stuffAdjective>dunite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.55</MaxHitPoints>
+                  <WorkToBuild>4.5</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Pegmatite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkPegmatite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(201, 150, 115)</color>
+                <stuffAdjective>pegmatite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.38</MarketValue>
+                  <MaxHitPoints>1.3</MaxHitPoints>
+                  <WorkToBuild>4.5</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Use the same rock texture as Cupro's Stones-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Cupro's Stones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>MBS Faux Rock Wall</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="FauxRockWall"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Cupro/Object/Structure/RockFlecked_Atlas</texPath>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Dubs Bad Hygiene, Fertile Fields, Fermenter, Fermenter (Continued)}
+    ==========-->
+
+  <!--Fermenting shit produces Fertile Fields fertilizer-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Fermenter</li>
+          <li>Fermenter (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>//Defs/Fermenter.FermentDef[defName="Ferment_DBH_Biosolids"]/Product</xpath>
+              <value>
+                <Product>RawCompost</Product>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Empire {Realistic Planets Continued}
+    ==========-->
+	
+	<!--Biomes from Realistic Planets patched for Empire base location/production modifiers-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Empire</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Realistic Planets Continued</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Grassland</defName>
+                <label>grasslands</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>0.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>0.5</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Savanna</defName>
+                <label>savanna</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>0.5</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>0.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Steppes</defName>
+                <label>steppes</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>.25</li>                  <!-- Animals -->
+                  <li>0</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1.25</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_TemperateDesert</defName>
+                <label>temperate desert</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Permafrost</defName>
+                <label>permafrost</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.5</li>                  <!-- Food -->
+                  <li>.5</li>                  <!-- Weapons -->
+                  <li>.5</li>                  <!-- Apparel -->
+                  <li>0.75</li>                  <!-- Animals -->
+                  <li>0</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Oasis</defName>
+                <label>desert oasis</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>1.25</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.5</li>                  <!-- Animals -->
+                  <li>0.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1.25</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>0.75</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Expanded Materials - Metals {Simple Chains: Lumber, VGP Garden Fabrics}
+    ==========-->
+
+  <!--Allow Tanning Liquor to use Logs instead of Lumber, trestle uses iron instead of steel-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Lumber</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeCharcoal"]/*//thingDefs/li[text()="WoodLog"]</xpath>
+            <value>
+              <li>Owl_WoodLog</li>
+            </value>
+          </li>
+          <li Class="PatchOperationSetName">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle"]/costList/Steel</xpath>
+            <name>VMEu_Iron</name>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--loom uses iron instead of steel-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Fabrics</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationSetName">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef[defName="TableLoom"]/costList/Steel</xpath>
+            <name>VMEu_Iron</name>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
+    ==========-->
+
+  <!--Allow Tanning Liquor to use Logs instead of Lumber-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Woodworking</li>
+      <li>Expanded Woodworking (Forked)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/ingredients/li/filter</xpath>
+            <value>
+              <filter>
+                <categories>
+                  <li>WoodTypes</li>
+                </categories>
+              </filter>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/fixedIngredientFilter</xpath>
+            <value>
+              <fixedIngredientFilter>
+                <categories>
+                  <li>WoodTypes</li>
+                </categories>
+              </fixedIngredientFilter>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Enables building with the wood types from "Expanded Woodworking" on the buildings from "Survivalist's Additions".-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Woodworking</li>
+      <li>Expanded Woodworking (Forked)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Survivalist's Additions</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--if costlist is woodlog but now is RawWoody-->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/costList/WoodLog</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/constructEffect</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]</xpath>
+            <value>
+              <stuffCategories>
+                <li>RawWoody</li>
+              </stuffCategories>
+            </value>
+          </li>
+          <!--if stuff already woody but now is RawWoody-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_ShelterDoor" or defName = "SRV_WallShelter" or defname = "SRV_VinegarBarrel" or defName="SRV_ShelterHeater" or defName="SRV_Snare"]/stuffCategories/li[.="Woody"]</xpath>
+            <value>
+              <li>RawWoody</li>
+            </value>
+          </li>
+          <!--costStuffCount adjusts-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_ShelterHeater"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>5</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_StumpChair" or defName = "SRV_ShelterDoor"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>3</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[@Name="CampTableBase"]</xpath>
+            <value>
+              <costStuffCount>7</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_WallShelter"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>1</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_VinegarBarrel" or defName = "SRV_Snare"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>15</costStuffCount>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Extended Storage {Base, Rim Cuisine 2, Rim of Madness - Bones}
+    ==========-->
+	<!--Adds Storage Settings filters for the mods involved.-->
+  <!--Base-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <value>
+              <li>Chocolate</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>Chocolate</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--Rim Cuisine 2-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RimCuisine 2 Core (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_Basket"]/building/fixedStorageSettings/filter/categories</xpath>
+            <value>
+              <li>RC2_FoodProcessed</li>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/categories</xpath>
+            <value>
+              <li>RC2_FoodMealsJoy</li>
+              <li>RC2_DrinkMealsJoy</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Rim of Madness - Bones-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Rim of Madness - Bones</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <value>
+              <li>ROMB_Marrow</li>
+            </value>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+              <value>
+                <li>ROMB_Gelatin</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter</xpath>
+              <value>
+                <thingDefs>
+                  <li>ROMB_Gelatin</li>
+                </thingDefs>
+              </value>
+            </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Floored {Simply More Bridges (Continued)}
+    ==========-->
+
+  <!--Makes the bridges from Simply More Bridges match the floored tiled texture-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Floored [1.0+]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="DeepWaterBridgeStoneBase" or @Name="HeavyBridgeStoneBase"]/texturePath</xpath>
+            <value>
+              <texturePath>TileStone</texturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="DeepWaterBridgeMetalBase" or @Name="HeavyBridgeMetalBase"]/texturePath</xpath>
+            <value>
+              <texturePath>GenericFloorTile</texturePath>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Harvest Organs Post Mortem {Alpha Animals, VGP Garden Medicine}
+    ==========-->
+
+  <!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Alpha Animals</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>AA_CactipineQuill</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Remove most VGP Garden Medicine from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Medicine</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyBasic" or defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>VG_antibiotics</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>Bandagekit</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Industrial Age - Objects and Furniture {VGP Garden Gourmet, Lord of the Rims - Dwarves, Lord of the Rims - Elves}
+    ==========-->
+
+  <!--Add recipes to stove furnace-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Age - Objects and Furniture (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Gourmet</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="CookGrillcheese" or defName="GrillPolenta" or defName="Cookgrilledsandwich" or defName="CookTacos" or defName="CookPorridge" or defName="GrillKabob" or defName="Grillsteak" or defName="GrillVegetables"]/recipeUsers</xpath>
+            <value>
+              <li>WoodStoveFurnace</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Make Dwarven Chandelier and Candelabra refuelable with wax-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Age - Objects and Furniture (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Lord of the Rims - Dwarves</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra"]/comps/li/fuelFilter/thingDefs</xpath>
+        <value>
+          <thingDefs>
+            <li>Jecrell_Wax</li>
+          </thingDefs>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Make Elven Candelabra refuelable with wax-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Age - Objects and Furniture (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Lord of the Rims - Elves</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="LotRE_ElvenCandelabra"]/comps/li/fuelFilter/thingDefs</xpath>
+        <value>
+          <thingDefs>
+            <li>Jecrell_Wax</li>
+          </thingDefs>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Medical Training {Thanks For All The Fish}
+    ==========-->
+
+  <!--Remove Fish from training bench-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medical Training</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="IF_MedTable"]/fixedIngredientFilter/disallowedCategories</xpath>
+            <value>
+              <disallowedCategories>
+                <li>CorpsesFish</li>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+              </disallowedCategories>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    ReGrowth: Biomes of The Rim {Expanded Woodworking}
+    ==========-->
+
+  <!--Change tree to produce proper logs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth: Biomes of The Rim - Boreal Expansion</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+        <li>Expanded Woodworking (Forked)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-B_Plant_BlueTreePine" or defName="RG-B_Plant_LargeTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth - Cold Bog Expansion</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+        <li>Expanded Woodworking (Forked)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-CB_Plant_BogTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth - Wasteland</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+        <li>Expanded Woodworking (Forked)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-W_Plant_DryTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Repair Workbench {[LC] Survival Tools, Survival Tools Reborn}
+    ==========-->
+
+  <!--Add survival tools to repair workbench-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Repair Workbench</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[LC] Survival Tools</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/ingredients/li/filter/categories</xpath>
+            <value>
+              <li>Tools</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>Tools</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Smokeleaf Industry Reborn {Vanilla Brewing Expanded}
+    ==========-->
+
+  <!--Add to HempFlour to Whiskey production-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Smokeleaf Industry Reborn</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Brewing Expanded</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="VBE_MakeWhiskeyMash"]/ingredients/li/filter/thingDefs | /Defs/RecipeDef[defName="VBE_MakeWhiskeyMash"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>HempFlour</li>
+          </value>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Standalone Hot Spring {Dubs Bad Hygiene}
+    ==========-->
+
+  <!--Change hotspring relaxation type-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Standalone Hot Spring</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Dubs Bad Hygiene</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="StandaloneHotSpring"]/building/joyKind | /Defs/JobDef[defName="BathStandaloneHotSpring"]/joyKind | /Defs/JoyGiverDef[defName="BathStandaloneHotSpring"]/joyKind</xpath>
+        <value>
+          <joyKind>Hydrotherapy</joyKind>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded {Simple Chains: Leather, Fertile Fields}
+    ==========-->
+
+  <!--Allow corpse composting at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="CompostCorpseCampfire"]/recipeUsers</xpath>
+        <value>
+          <li>Stone_Campfire</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[@Name="MakeTanningLiquorBase"]/recipeUsers</xpath>
+        <value>
+          <li>Stone_Campfire</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    VGP Garden Fabrics / VGP Garden Fabrics Simplified {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings, [HLX] ReGrowth - Extinct Animals Pack}
+    ==========-->
+
+  <!--Add Camel wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Extreme Desert</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>WoolCamel</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>WoolCamel</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Musk Ox wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Tundra</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Cow wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Vikings</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>VFEV_WoolCow</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>VFEV_WoolCow</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add woolly rhino wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>ReGrowth: Extinct Animals Pack</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>RG-EAP_WoollyRhinoWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>RG-EAP_WoollyRhinoWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+</Patch>
