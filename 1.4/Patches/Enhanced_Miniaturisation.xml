@@ -660,7 +660,7 @@
     Vanilla Furniture Expanded - Power
     ==========-->
 
-    <!--VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator-->
+    <!--VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Power</li>
@@ -669,7 +669,7 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine" or defName="VFE_AdvancedSolarGenerator" or defName="VPE_HelixienGenerator" or defName="VPE_IndustrialHelixienGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine" or defName="VFE_AdvancedSolarGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator"]</xpath>
                     <value>
                         <minifiedDef>MinifiedThing</minifiedDef>
                         <thingCategories>
@@ -690,13 +690,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VPE_HelixienGenerator"]/statBases</xpath>
-                    <value>
-                        <Mass>150</Mass>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VPE_IndustrialHelixienGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator" or defName="VFE_IndustrialWoodFiredGenerator"]/statBases</xpath>
+                    <xpath>/Defs/ThingDef[defName="VFE_IndustrialChemfuelPoweredGenerator" or defName="VFE_IndustrialWoodFiredGenerator"]/statBases</xpath>
                     <value>
                         <Mass>300</Mass>
                     </value>

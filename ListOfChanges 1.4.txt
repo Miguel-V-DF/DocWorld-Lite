@@ -1,0 +1,364 @@
+Consider this a dictionary. In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS).  
+Each file can be toggled in mod settings, nullifying content.  
+An example template of each file documentation is setup below.  
+I do not document every detail here, but you can get a good idea of which mods interact.  
+  
+### File_Name:
+`Description of File.`
+
+    Mod_Name
+        {Content or Mod_Name}
+***
+***
+
+### Biome_Foraging:
+`This file will contain all patches that alter biome foraging. All require Vanilla Plants Expanded, with the exception of Lord of the Rims - Elves.`
+
+    Vanilla Biomes
+        {VCE_Bearberry(BorealForest/ColdBog), VCE_RawCherry(Tundra), VCE_RawBanana(TropicalRainforest/TropicalSwamp), VCE_RawPricklyPear(AridShrubland)}
+    Lord of the Rims - Elves
+        {LotRE_PlantLembas(LotRE_MallornForest)}
+    More Vanilla Biomes
+        {VCE_RawCherry(ZBiome_AlpineMeadow), VCE_RawPlum(ZBiome_CloudForest), VCE_RawPricklyPear(ZBiome_DesertOasis), VCE_RawApple(ZBiome_Grasslands), VCE_RawPeach(ZBiome_Marsh)}
+    Realistic Planets Continued
+        {VCE_Bearberry(RRP_Steppes/RRP_Permafrost), VCE_RawPeach(RRP_Savanna), VCE_RawPricklyPear(RRP_TemperateDesert/RRP_Oasis), VCE_RawApple(RRP_Grassland)}
+    RimUniverse - Biomes
+        {VCE_Bearberry(Permafrost), VCE_RawApple(Grassland), VCE_RawPeach(Savanna), VCE_RawBanana(MoistDeciduousForest)}
+
+### Cloth_Beds:
+`This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
+
+    Beds patched are from
+		{Vanilla, Gloomy Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module.}
+	Mods that nulify the changes are 
+		{Beds Need Bedding, Modern Bed, [T] MoreBedsCloth and [JPT] Soft Warm Beds.}
+
+### Enhanced_Miniaturisation:
+`This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods.`
+
+    Vanilla
+        {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
+    Apothecary (Continued)
+        {AYCharcoalFiredGenerator}
+    Dubs Bad Hygiene
+        {WindPump}
+    Genetic Rim
+        {GR_CryostabilizedEngine}
+    RimPlas (Continued)
+        {RPGrapheneSolarGenerator, RPGrapheneWindTurbine}
+    Smokeleaf Industry Reborn
+        {HempSolarGenerator, HempolineGenerator}
+    Vanilla Factions Expanded - Settlers
+        {Windmill}
+    Vanilla Furniture Expanded - Production
+        {VFE_ComponentFabricationBench}
+    Vanilla Furniture Expanded - Power
+        {VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator}
+
+### Glass_Requisites (Requires either Glass+Lights or Just glass, don't use both):
+`This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights/Just Glass as the base glass mod.`
+
+    Vanilla
+        {Lamps and Sun Lamp require glass}
+    Ceiling Lights
+        {Ceiling light and Grow light require glass}
+    Dubs Bad Hygiene
+        {Ceiling Fans require glass}
+    Dubs Skylights
+        {Skylights require glass. Also removes "Dubs Skylights" glass resource.}
+    Glitter Tech, Glitter Tech (No Surgery)
+        {Floodlight requires glass}
+    Industrial Age - Objects and Furniture
+        {Lamps require glass}
+    More Furniture
+        {Lamps and endtables require glass}
+    Raise The Roof
+        {Transparent roofs require glass}
+    RIMkea
+        {Kageshain lamps require glass}
+    RimPlas (Continued)
+        {CeilingLights require glass}
+    Smokeleaf Industry Reborn
+        {GrowLamps require glass}
+    Static Quality Plus
+        {Sun lamps require glass}
+    Vanilla Factions Expanded - Settlers
+        {Chemlamps require glass}
+    Vanilla Furniture Expanded
+        {Lamps require glass}
+    Vanilla Furniture Expanded - Spacer Module
+        {Lamps require glass, Glass+Lights outdoor lamps have equal lighting and resource requirements}
+    Wall Light
+        {Lamps require glass}
+    UN-Colony (Continued), UN-Colony [1.2]
+        {Remove and replace all UN-Colony glass}
+	Simple Utilities: Ceiling
+		{Lamps require glass}
+
+### Linkables:
+`This file will contain all linkable patches that allow furniture from various mods to utilize modded linkables, based on Vanilla counterparts. The patch searches for buildings already using the vanilla linkables counterparts to ensure maximum compatibility.`
+
+    Change Dresser
+        {Vanilla EndTable support}
+    Smokeleaf Industry Reborn
+        {RimPlas (Continued), Vanilla Furniture Expanded - Production}
+    Sparkling Worlds - Full Mod / Sparkling Worlds - Modular Core - Reduced features
+        {Rimatomics}
+    Vanilla Furniture Expanded
+        {Vanilla EndTable support}
+    Vanilla Furniture Expanded - Medical Module
+        {Vanilla VitalsMonitor support}
+    Vanilla Furniture Expanded - Production
+        {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Rimatomics, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features, Swords (Continued)}
+    Vanilla Furniture Expanded - Spacer Module
+        {Vanilla EndTable support}
+    Wall Vitals Monitor
+        {Vanilla VitalsMonitor support}
+	Medical IV's
+		{Vanilla VitalsMonitor support}
+
+### Misc:
+`This file will contain all miscellaneous patches that replace/change all sorts of things from various mods and can't be easily categorized.`
+
+    Vanilla
+        {Add a melting mechanoid recipe for low tech colonies, Sun Lamp doesn't short circuit in the rain}
+    Expanded Roofing
+        {Get rid of the annoying square shadows with glass roof}
+    Fishing Nets
+        {Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps}
+    Industrial Age - Objects and Furniture
+        {Make gas lamps from require chemfuel}
+    Mamuffalo
+        {Use Vanilla muffalo leather}
+    RIMkea
+        {Nerf RIMkea furniture comfort and beauty}
+    Rim of Madness - Bones
+        {Wall nerf by 50 hitpoints}
+    Roof Support 1.3
+        {Minor edits, allow cover}
+	SeedsPlease
+		{Healroot recipes onto production benches}
+
+### Multi_Mod_Support:
+`This file will contain all patches that replace/change items based off whether or not multiple mods are loaded.`
+
+    Ceramics VEF
+        {Expanded Woodworking, Expanded Woodworking (Forked), Fertile Fields, Vanilla Furniture Expanded - Production}
+			<!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
+			<!--Add most recipes to RockMill from FF-->
+			<!--Add most recipes to VFE-Production electric stonecutter-->
+    Cupro's Stones
+        {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall}
+			<!--Chunks are buildable-->
+			<!-- FauxRockWall Use the same rock texture as Cupro's Stones-->
+    Dubs Bad Hygiene
+        {Fertile Fields, Fermenter, Fermenter (Continued)}
+			<!--Fermenting shit produces Fertile Fields fertilizer-->
+    Empire
+        {Realistic Planets Continued}
+			<!--Biomes from Realistic Planets patched for Empire base location/production modifiers-->
+    Expanded Materials - Metals
+        {Simple Chains: Lumber, VGP Garden Fabrics}
+			<!--Allow Tanning Liquor to use Logs instead of Lumber, trestle uses iron instead of steel-->
+			<!--loom uses iron instead of steel-->
+    Expanded Woodworking, Expanded Woodworking
+        {Simple Chains: Leather, Survivalist's Additions}
+			<!--Allow Tanning Liquor to use Logs instead of Lumber-->
+			<!--Enables building with the wood types from "Expanded Woodworking" on the buildings from "Survivalist's Additions".-->
+    Extended Storage
+        {Base, Rim Cuisine 2, Rim of Madness - Bones}
+			<!--Adds Storage Settings filters for the mods involved.-->
+    Floored
+        {Simply More Bridges (Continued)}
+			<!--Makes the bridges from Simply More Bridges match the floored tiled texture-->
+    Harvest Organs Post Mortem
+        {Alpha Animals, VGP Garden Medicine}
+			<!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
+			<!--Remove most VGP Garden Medicine from Harvest recipes-->
+    Industrial Age - Objects and Furniture
+        {VGP Garden Gourmet, Lord of the Rims - Dwarves, Lord of the Rims - Elves}
+			<!--Add recipes to stove furnace-->
+			<!--Make Dwarven Chandelier and Candelabra refuelable with wax-->
+			<!--Make Elven Candelabra refuelable with wax-->
+    Medical Training
+        {Thanks For All The Fish}
+			<!--Remove Fish from training bench-->
+    ReGrowth: Biomes of The Rim
+        {Expanded Woodworking, Expanded Woodworking (Forked)}
+			<!--Change tree to produce proper logs-->
+    Repair Workbench
+        {[LC] Survival Tools}
+			<!--Add survival tools to repair workbench-->
+    Smokeleaf Industry Reborn
+        {Vanilla Brewing Expanded}
+			<!--Add to HempFlour to Whiskey production-->
+    Standalone Hot Spring
+        {Dubs Bad Hygiene}
+			<!--Change hotspring relaxation type-->
+    Vanilla Furniture Expanded
+        {Simple Chains: Leather, Fertile Fields}
+			<!--Allow corpse composting at stone campfire-->
+			<!--Allow tanning liquor to be made at stone campfire-->
+    VGP Garden Fabrics / VGP Garden Fabrics Simplified
+        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings, [HLX] ReGrowth - Extinct Animals Pack}
+			<!--Add Camel wool to blended wool recipe-->
+			<!--Add Musk Ox wool to blended wool recipe-->
+			<!--Add Cow wool to blended wool recipe-->
+
+### Research_Projects:
+`This file will contain all patches that replace/change research requirements for Vanilla and Mods, combining or reorganing.`
+	
+    DDA Security and More
+        {Doors Expanded}
+    Glass+Lights
+        {Raise The Roof}
+    Vanilla Armour Expanded
+        {[O21] Dragons Not Included}
+    Vanilla Factions Expanded - Medieval
+        {[O21] Dragons Not Included, Medieval Madness: Tools of the Trade}
+	Vanilla Factions Expanded - Vikings
+		{[O21] Dragons Not Included, Change armor research}
+	Vanilla Furniture Expanded - Spacer Module
+		{[WD] Reinforced Doors}
+	Vanilla Weapons Expanded
+		{[O21] Dragons Not Included}
+	[O21] Dragons Not Included
+		{change armor research}
+    Fertile Fields [1.1]
+        {Allow all terraforming in Medieval era}
+    Glass+Lights
+        {Disallow lights until electricity is researched, Remove Redundancies, Vanilla Furniture Expanded - Spacer Module}
+    High Tech Laboratory Facilities (Continued)
+        {Require Research for countertop}
+    Industrial Age - Objects and Furniture
+        {Telescope requires complex furniture}
+    Industrial Rollers
+        {Rollers require complex furniture and electricity}
+    Medieval Madness: Tools of the Trade
+        {Change weapon requirements}
+    Medieval Medicines
+        {Unlock drug lab buildable at first medicine research}
+    RoofBomb
+        {Shaped Charges require IEDs}
+	Smoked meat
+		{Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture}
+
+### Stuffed_Items:
+`This file will contain all patches that replace/change item stuffability for Vanilla and Mods.`
+
+    Vanilla
+        {Vent, Butcher Table, Tool Cabinet}
+    VGP Garden Gourmet
+        {Stuff items}
+    Fish Industry
+        {Stuff the pier}
+
+*******
+# Supported Mods in RimWorld 1.3
+*******
+```
+Alpha Animals
+Apothecary (Continued)
+Beds Need Bedding
+Ceiling Lights
+Ceramics VEF
+Change Dresser
+Concrete Walls
+Cupro's Stones
+DDA Security and More
+Doors Expanded
+Doors Expanded (Dev)
+Dubs Bad Hygiene
+Dubs Skylights
+Empire
+Expanded Materials - Metals
+Expanded Roofing
+Expanded Woodworking
+Expanded Woodworking (Forked)
+Extended Storage (Continued)
+Fermenter
+Fermenter (Continued)
+Fertile Fields
+Fish Industry
+Fishing Nets
+Floored
+Genetic Rim
+Glass+Lights
+Glitter Tech
+Glitter Tech (No Surgery)
+Gloomy Furniture
+GloomyFurniture
+Harvest Organs Post Mortem
+High Tech Laboratory Facilities (Continued)
+Industrial Age - Objects and Furniture (Continued)
+Industrial Rollers
+Just Glass
+Lord of the Rims - Dwarves
+Lord of the Rims - Elves
+MBS Faux Rock Wall
+Medical IV's
+Medical System Expansion - Revived
+Medical Training
+Medieval Medicines
+MendAndRecycle
+Metallic Batteries
+Modern Bed
+More Furniture (Continued)
+More Vanilla Biomes
+RIMkea
+Raise The Roof 1.3
+ReGrowth: Biomes of The Rim - Boreal Expansion
+ReGrowth: Biomes of The Rim - Tundra Expansion
+ReGrowth: Biomes of The Rim - Wasteland
+Realistic Planets Continued
+Repair Workbench
+Rim Cuisine 2
+Rim of Madness - Bones
+RimPlas (Continued)
+Rimatomics
+Roof Support 1.3
+RoofBomb
+SeedsPlease
+Simple Chains: Leather
+Simple Chains: Lumber
+Simple Chains: Steel
+Simply More Bridges (Continued)
+Simple Utilities: Ceiling
+Smoked meat
+Smokeleaf Industry Reborn
+Sparkling Worlds - Full Mod
+Sparkling Worlds - Modular Core - Reduced features
+Standalone Hot Spring
+Static Quality Plus
+Survival Meals Expanded
+Survivalist's Additions
+Thanks For All The Fish
+UN-Colony (Continued)
+UN-Colony 1.2
+VGP Garden Fabrics
+VGP Garden Fabrics Simplified
+VGP Garden Gourmet
+VGP Garden Medicine
+Vanilla Animals Expanded — Extreme Desert
+Vanilla Animals Expanded — Tundra
+Vanilla Armour Expanded
+Vanilla Brewing Expanded
+Vanilla Cooking Expanded
+Vanilla Factions Expanded - Medieval
+Vanilla Factions Expanded - Settlers
+Vanilla Factions Expanded - Vikings
+Vanilla Furniture Expanded
+Vanilla Furniture Expanded - Medical Module
+Vanilla Furniture Expanded - Power
+Vanilla Furniture Expanded - Production
+Vanilla Furniture Expanded - Spacer Module
+Vanilla Plants Expanded
+Wall Light
+Wall Vitals Monitor
+What The Hack
+[JPT] Soft Warm Beds
+[LC] Survival Tools
+[O21] Dragons Not Included
+[T] MoreBedsCloth
+[WD] Reinforced Doors
+```
