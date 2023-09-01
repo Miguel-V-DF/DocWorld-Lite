@@ -25,8 +25,8 @@ Misc - Removed the buff to Sun Lamp. Changed patches to target the new versions 
 Multi_Mod_Support - Removed patch to Survivalist addition as the mod was not updated to 1.4;
 - Removed patch for MBS Faux Rock Wall, as I couldn't even find the mod;
 - Changed integration with Repair Workbench from [LC] Survival Tools to the sucessor mod Survival Tools;
-- Removed patch from Regrowth Cold Bog, due to that mod current inexistence and I didn't find the tree in any of the other Regrowth mods, and to Boreal, due to it being already patched on Expanded Woodworking;
-- 
+- Removed patch from Regrowth Cold Bog, due to that mod current inexistence and I didn't find the tree in any of the other Regrowth mods, and to Boreal, due to it being already patched on Expanded Woodworking. Removed the patch for Wastelands too, as frankly, the mod already has a catch all patch that should be enough;
+- Disable the patches between Floored and Simply More Bridges, Expanded Materials - Metals and Simple Chains: Lumber, all due to some problems that I don't have time right now to diagnose.
 
 Research Projects - Changed support for the 1.4 version of Raise The Roof, removed patch putting tech level at Medieval;
 - Removed patch for RoofBomb as RoofBomb (Continued) already has the feature. 
@@ -35,7 +35,6 @@ Research Projects - Changed support for the 1.4 version of Raise The Roof, remov
 - Removed the patch for Industrial Rollers
 
 Stuffed Item - checked the patches, all okay.
-
 
 1.4.1 removed the Helixien buildings from the Enhanced_Miniaturisation patch. Tried to target their own new mod, but it seems something is coded in assembly level to prevent free movement, I will take a closer look at it later.
 

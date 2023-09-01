@@ -506,7 +506,7 @@
     ==========-->
 
   <!--Allow Tanning Liquor to use Logs instead of Lumber, trestle uses iron instead of steel-->
-  <Operation Class="PatchOperationFindMod">
+  <!--Operation Class="PatchOperationFindMod">
     <mods>
       <li>Expanded Materials - Metals</li>
     </mods>
@@ -529,7 +529,7 @@
         </operations>
       </match>
     </match>
-  </Operation>
+  </Operation!-->
 
   <!--loom uses iron instead of steel-->
   <Operation Class="PatchOperationFindMod">
@@ -699,7 +699,7 @@
     ==========-->
 
   <!--Makes the bridges from Simply More Bridges match the floored tiled texture-->
-  <Operation Class="PatchOperationFindMod">
+  <!--Operation Class="PatchOperationFindMod">
     <mods>
       <li>Floored [1.0+]</li>
     </mods>
@@ -724,7 +724,7 @@
         </operations>
       </match>
     </match>
-  </Operation>
+  </Operation!-->
 
   <!--==========
     Harvest Organs Post Mortem {Alpha Animals, VGP Garden Medicine}

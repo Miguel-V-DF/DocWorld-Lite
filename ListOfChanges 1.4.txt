@@ -37,7 +37,7 @@ I do not document every detail here, but you can get a good idea of which mods i
 `This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods.`
 
     Vanilla
-        {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
+        {!--Torch_Lamp!--, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
     Apothecary (Continued)
         {AYCharcoalFiredGenerator}
     Dubs Bad Hygiene
