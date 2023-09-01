@@ -1,6 +1,42 @@
 # Changelog for DocWorld Lite
 # all the previous changes to the 1.4 update will not be included retroactively
 
+1.4.2 After a long hiatus, I am playing Rimworld again, and I decided to make a pass on DocWorld Lite testing the patches. I will be removing any patches that I don't see much sense to mantain or that the mods haven't been updated to 1.4 till now.
+
+Biome Foraging - Updated the mods target to the 1.4 versions as needed.
+
+Cloth Beds - update 2 nulifying mods, Modern Bed (1.4) and [JPT] Soft Warm Beds (Continued), to their 1.4 versions, and removed [T] MoreBedsCloth that did not get a version for 1.4;
+- Added Patches for the following mods adding beds: Polyamory Beds (Vanilla Edition), Loft Bed, Single Royal Beds, Connected Bed, Big and Small Furniture and Bunk Beds. Added patch for the baby crib in Biotech.
+
+Enhanced_Miniaturisation - Removed patch for the obsolet mod Genetic Rim. Patch for torch is disabled as I don't have the time right now to solve the issue with the SanguphageMeetingTorch. Removed the MultiAnalyzer patch as it's not needed anymore, base game has it.
+
+Glass_Requisites: Changed patches to account for changes in the mod or new versions in the following mods:
+- Ceiling Lights to Ceiling Light; 
+- Raise the Roof 1.4; 
+- Removed the patch for Static Quality Plus; 
+- Vanilla Furniture Expanded; 
+- Simple Utilities: Ceiling, removed the patch as it not needed, inheritance from Vanilla is enough; 
+- Removed balance changes to Vanilla Furniture Expanded - Spacer Module that equalized cost and glowradius of Glass+Lights and Spacer versions. Removed patch to Spacer_SunLamp for now as I don't have time to track the error.
+
+Linkables - Tested the patches and removed the Medical System Expansion - Revived, as the 1.4 version, Medical System Expansion 2, doesn't have the workbench as far as I can see.
+
+Misc - Removed the buff to Sun Lamp. Changed patches to target the new versions in 1.4: Expanded Roofing 1.4, Raise the Roof 1.4, Fishing Nets Continued, removed Seeds Please patch as the Lite version doesn't need it. Removed the Fishing Nets Continued path as I don't even understand it (messing with GPU) and I don't want patches here that I can fix if needed. Removed the Rimkead nerf to beauty and confort, I presume you want that if you download that mod. Removed the removal (ha) of the Mamuffalo fur.
+
+Multi_Mod_Support - Removed patch to Survivalist addition as the mod was not updated to 1.4;
+- Removed patch for MBS Faux Rock Wall, as I couldn't even find the mod;
+- Changed integration with Repair Workbench from [LC] Survival Tools to the sucessor mod Survival Tools;
+- Removed patch from Regrowth Cold Bog, due to that mod current inexistence and I didn't find the tree in any of the other Regrowth mods, and to Boreal, due to it being already patched on Expanded Woodworking;
+- 
+
+Research Projects - Changed support for the 1.4 version of Raise The Roof, removed patch putting tech level at Medieval;
+- Removed patch for RoofBomb as RoofBomb (Continued) already has the feature. 
+- Removed patch for Smoked Meat as the balance changes were implemented in the base mod.
+- Removed all patches involving [O21] Dragons Not Included, as the mod series was superceeded by the Outland series
+- Removed the patch for Industrial Rollers
+
+Stuffed Item - checked the patches, all okay.
+
+
 1.4.1 removed the Helixien buildings from the Enhanced_Miniaturisation patch. Tried to target their own new mod, but it seems something is coded in assembly level to prevent free movement, I will take a closer look at it later.
 
 1.4.0 updated to 1.4 and tests passed for 1.4 and backwards compatibility with 1.3. 

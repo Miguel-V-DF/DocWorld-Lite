@@ -9,7 +9,6 @@
       <li>Vanilla Plants Expanded</li>
     </mods>
     <match Class="PatchOperationSequence">
-      <success>Always</success>
       <operations>
         <!--Cold-->
         <li Class="PatchOperationReplace">
@@ -69,7 +68,6 @@
         <li>More Vanilla Biomes</li>
       </mods>
       <match Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
             <xpath>/Defs/BiomeDef[defName="ZBiome_AlpineMeadow"]/foragedFood</xpath>
@@ -115,10 +113,9 @@
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>Realistic Planets - Fan Update</li>
+        <li>Realistic Planets Continued</li>
       </mods>
       <match Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
             <xpath>/Defs/BiomeDef[defName="RRP_Grassland"]/foragedFood</xpath>
@@ -158,10 +155,9 @@
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>RimUniverse - Biomes</li>
+        <li>RimUniverse - Biomes (Continued)</li>
       </mods>
       <match Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
             <xpath>/Defs/BiomeDef[defName="Permafrost"]/foragedFood</xpath>

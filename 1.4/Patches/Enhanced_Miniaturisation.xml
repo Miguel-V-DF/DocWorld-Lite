@@ -6,8 +6,7 @@
     ==========-->
 
     <!--Torch_Lamp-->
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
+    <!--Operation Class="PatchOperationSequence">
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "TorchLamp"][not(minifiedDef)]</xpath>
@@ -25,10 +24,9 @@
                 </value>
             </li>
         </operations>
-    </Operation>
+    </Operation!-->
     <!--CommsConsole-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "CommsConsole"][not(minifiedDef)]</xpath>
@@ -49,7 +47,6 @@
     </Operation>
     <!--GroundPenetratingScanner-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "GroundPenetratingScanner"][not(minifiedDef)]</xpath>
@@ -70,7 +67,6 @@
     </Operation>
     <!--LongRangeMineralScanner-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "LongRangeMineralScanner"][not(minifiedDef)]</xpath>
@@ -91,7 +87,6 @@
     </Operation>
     <!--MoisturePump-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "MoisturePump"][not(minifiedDef)]</xpath>
@@ -110,30 +105,8 @@
             </li>
         </operations>
     </Operation>
-    <!--MultiAnalyzer-->
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "MultiAnalyzer"][not(minifiedDef)]</xpath>
-                <value>
-                    <minifiedDef>MinifiedThing</minifiedDef>
-                    <thingCategories>
-                        <li>BuildingsMisc</li>
-                    </thingCategories>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "MultiAnalyzer"]/statBases</xpath>
-                <value>
-                    <Mass>50</Mass>
-                </value>
-            </li>
-        </operations>
-    </Operation>
     <!--PodLauncher-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "PodLauncher"][not(minifiedDef)]</xpath>
@@ -154,7 +127,6 @@
     </Operation>
     <!--Sarcophagus-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "Sarcophagus"][not(minifiedDef)]</xpath>
@@ -175,7 +147,6 @@
     </Operation>
     <!--ChemfuelPoweredGenerator-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "ChemfuelPoweredGenerator"][not(minifiedDef)]</xpath>
@@ -196,7 +167,6 @@
     </Operation>
     <!--PowerSwitch-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "PowerSwitch"][not(minifiedDef)]</xpath>
@@ -217,7 +187,6 @@
     </Operation>
     <!--SolarGenerator-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "SolarGenerator"][not(minifiedDef)]</xpath>
@@ -238,7 +207,6 @@
     </Operation>
     <!--WindTurbine-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "WindTurbine"][not(minifiedDef)]</xpath>
@@ -259,7 +227,6 @@
     </Operation>
     <!--WoodFiredGenerator-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "WoodFiredGenerator"][not(minifiedDef)]</xpath>
@@ -280,7 +247,6 @@
     </Operation>
     <!--ElectricCrematorium-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "ElectricCrematorium"][not(minifiedDef)]</xpath>
@@ -301,7 +267,6 @@
     </Operation>
     <!--Hopper-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "Hopper"][not(minifiedDef)]</xpath>
@@ -322,7 +287,6 @@
     </Operation>
     <!--HydroponicsBasin-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "HydroponicsBasin"][not(minifiedDef)]</xpath>
@@ -343,7 +307,6 @@
     </Operation>
     <!--Cooler-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "Cooler"][not(minifiedDef)]</xpath>
@@ -364,7 +327,6 @@
     </Operation>
     <!--PassiveCooler-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "PassiveCooler"][not(minifiedDef)]</xpath>
@@ -385,7 +347,6 @@
     </Operation>
     <!--Vent-->
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName = "Vent"][not(minifiedDef)]</xpath>
@@ -415,7 +376,6 @@
             <li>Apothecary (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="AYCharcoalFiredGenerator"]</xpath>
@@ -446,7 +406,6 @@
             <li>Dubs Bad Hygiene</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="WindPump"]</xpath>
@@ -466,37 +425,6 @@
             </operations>
         </match>
     </Operation>
-	
-	<!--==========
-    Genetic Rim
-    ==========-->
-
-    <!--GR_CryostabilizedEngine-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Genetic Rim</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]</xpath>
-                    <value>
-                        <minifiedDef>MinifiedThing</minifiedDef>
-                        <thingCategories>
-                            <li>BuildingsMisc</li>
-                        </thingCategories>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]/statBases</xpath>
-                    <value>
-                        <Mass>300</Mass>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
 
     <!--==========
     RimPlas (Continued)
@@ -508,7 +436,6 @@
             <li>RimPlas (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator" or defName="RPGrapheneWindTurbine"]</xpath>
@@ -545,7 +472,6 @@
             <li>Smokeleaf Industry Reborn</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="HempSolarGenerator" or defName="HempolineGenerator"]</xpath>
@@ -582,7 +508,6 @@
             <li>Vanilla Factions Expanded - Settlers</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
@@ -613,12 +538,10 @@
             <li>Vanilla Furniture Expanded - Production</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationConditional">
                     <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
                     <match Class="PatchOperationSequence">
-                        <success>Always</success>
                         <operations>
                             <li Class="PatchOperationReplace">
                                 <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
@@ -666,7 +589,6 @@
             <li>Vanilla Furniture Expanded - Power</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine" or defName="VFE_AdvancedSolarGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator"]</xpath>
