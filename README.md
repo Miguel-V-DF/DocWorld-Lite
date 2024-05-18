@@ -14,7 +14,7 @@ A fork of the ambitious mod Docworld, this mod is more modest, patching a few mo
 Each setting can be disabled in the mod settings menu. Restart required for them to take effect.
 
 ### Important Info:
-[Link to Full Feature List](https://github.com/leugimimi/DocWorld-Lite/wiki/Mod-Features)
+[Link to Full Feature List](https://github.com/Miguel-V-DF/DocWorld-Lite/wiki)
 
 
 _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=2730410892)_
